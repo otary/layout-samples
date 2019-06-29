@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>双飞翼布局</title>
+
+		<style>
+			.box {
+				border: 1px solid;
+			}
+			
+			fieldset {
+				margin: 20px;
+				height: 150px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<fieldset>
+			<legend>float + margin居中（推荐）</legend>
+
+			<ul>
+				<li>ie5+</li>
+			</ul>
+
+			<style>
+				#main-1 {
+					margin: 0 100px 0 200px;
+				}
+				
+				#aside-1 {
+					float: left;
+					width: 200px;
+				}
+				
+				#nav-1 {
+					float: right;
+					width: 100px;
+				}
+			</style>
+
+			<div style="overflow: hidden;">
+				<div id="nav-1" class="box">
+					nav
+				</div>
+
+				<div id="aside-1" class="box">
+					aside
+				</div>
+
+				<!-- 中间栏要放在最后面-->
+				<div id="main-1" class="box">
+					main<br> main
+					<br> main
+					<br> main
+					<br>
+				</div>
+
+			</div>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>position布局</legend>
+
+			<style>
+				#main-2,
+				#nav-2,
+				#aside-2 {
+					position: absolute;
+				}
+				
+				#nav-2 {
+					left: 0;
+					width: 200px;
+				}
+				
+				#aside-2 {
+					right: 0;
+					width: 100px;
+				}
+				
+				#main-2 {
+					left: 200px;
+					right: 100px;
+				}
+			</style>
+
+			<div style="position: relative;">
+				<div id="nav-2" class="box">
+					nav
+				</div>
+
+				<div id="main-2" class="box">
+					main<br> main
+					<br> main
+					<br> main
+					<br>
+				</div>
+
+				<div id="aside-2" class="box">
+					aside
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>flex</legend>
+
+			<style>
+				#nav-3 {
+					width: 200px;
+				}
+				
+				#aside-3 {
+					width: 100px;
+				}
+				
+				#main-3 {
+					flex: 1;
+				}
+			</style>
+
+			<div style="display: flex; display: -webkit-flex;">
+				<div id="nav-3" class="box">
+					nav
+				</div>
+
+				<div id="main-3" class="box">
+					main<br> main
+					<br> main
+					<br> main
+					<br>
+				</div>
+
+				<div id="aside-3" class="box">
+					aside
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>table</legend>
+
+			<style>
+				#main-4,
+				#nav-4,
+				#aside-4 {
+					display: table-cell;
+				}
+				
+				#nav-4 {
+					width: 200px;
+				}
+				
+				#aside-4 {
+					width: 100px;
+				}
+				
+				#main-4 {}
+			</style>
+
+			<div style="display: table; width: 100%;">
+				<div id="nav-4" class="box">
+					nav
+				</div>
+
+				<div id="main-4" class="box">
+					main<br> main
+					<br> main
+					<br> main
+					<br>
+				</div>
+
+				<div id="aside-4" class="box">
+					aside
+				</div>
+			</div>
+		</fieldset>
+	</body>
+
+</html>

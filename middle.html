@@ -6,17 +6,12 @@
 		<title>垂直居中</title>
 
 		<style>
-			html,
-			body {
-				height: 100%;
-			}
-			
 			.box {
-				width: 100px;
+				height: 100px;
 				border: 1px dashed;
 			}
 			
-			.box-nowidth {
+			.box-noheight {
 				border: 1px solid;
 			}
 			
@@ -33,10 +28,26 @@
 		<hr />
 
 		<fieldset>
-			<legend>行级元素（table-cell + vertical-align）</legend>
+			<legend>行内元素（table-cell + vertical-align）</legend>
 
 			<div style="display: table-cell; vertical-align: middle; height:200px">
-				<div class="box">居中元素</div>
+				<div class="box-noheight">居中元素（高度固定）</div>
+			</div>
+		</fieldset>
+		
+		<fieldset>
+			<legend>行内元素（table + vertical-align）</legend>
+
+			<div style="display: table; vertical-align: middle; height: 100%;">
+				<div class="box-noheight" style="display: table-cell; vertical-align: middle;">居中元素（高度未知）</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>（单行）行内元素（line-height）</legend>
+
+			<div style="height: 200px;line-height: 200px;">
+				<span class="box">居中元素（高度固定）</span>
 			</div>
 		</fieldset>
 
@@ -44,7 +55,7 @@
 			<legend>块级元素（relative + margin-top）</legend>
 
 			<div style="position: relative; height: 100%;">
-				<div class="box" style=" position:relative;top:50%;height: 100px; margin-top: -50px;">居中元素</div>
+				<div class="box" style=" position:relative;top:50%;height: 100px; margin-top: -50px;">居中元素（高度固定）</div>
 			</div>
 		</fieldset>
 
@@ -52,7 +63,7 @@
 			<legend>块级元素（absoulte + transform）</legend>
 
 			<div style="position: relative; height: 100%; ">
-				<div class="box" style="position:absolute;top:50%;transform:translateY(-50%);">居中元素</div>
+				<div class="box-noheight" style="position:absolute;top:50%;transform:translateY(-50%);">居中元素（高度未知）</div>
 			</div>
 		</fieldset>
 
@@ -60,7 +71,7 @@
 			<legend>块级元素（absoulte + margin）</legend>
 
 			<div style="position: relative; height: 100%; ">
-				<div class="box" style="position: absolute;top: 0;bottom: 0;margin: auto; height: 100px;">居中元素</div>
+				<div class="box" style="position: absolute;top: 0;bottom: 0;margin: auto; height: 100px;">居中元素（高度固定）</div>
 			</div>
 		</fieldset>
 
@@ -68,7 +79,30 @@
 			<legend>块级元素（flex + align-items）</legend>
 
 			<div style="position:flex;display: -webkit-flex;align-items:center; height: 100%;">
-				<div class="box" >居中元素</div>
+				<div class="box-noheight">居中元素（高度未知）</div>
+			</div>
+		</fieldset>
+
+		<hr />
+
+		<fieldset>
+			<legend>（推荐）多列元素（table-cell + vertical-align）</legend>
+
+			<div style="/*position: absolute;*/ display: table;vertical-align: middle; height: 100%;">
+				<div style="display: table-cell;vertical-align: middle;">元素1</div>
+				<div style="display: table-cell;vertical-align: middle;">元素2</div>
+				<div style="display: table-cell;vertical-align: middle;">元素3</div>
+			</div>
+		</fieldset>
+		
+		
+		<fieldset>
+			<legend>多列元素（flex + align-items）</legend>
+
+			<div style="position:flex;display: -webkit-flex;align-items:center; height: 100%;">
+				<div class="box-noheight">居中元素（高度未知）</div>
+				<div class="box-noheight">居中元素（高度未知）</div>
+				<div class="box-noheight">居中元素（高度未知）</div>
 			</div>
 		</fieldset>
 

@@ -7,7 +7,7 @@
 
 		<style>
 			.box {
-				width: 100px;
+				width: 200px;
 				border: 1px dashed;
 			}
 			
@@ -19,6 +19,8 @@
 				margin: 20px;
 				height: 120px;
 			}
+			
+		
 		</style>
 	</head>
 
@@ -34,10 +36,10 @@
 			</ul>
 
 			<div>
-				<div class="box-nowidth" style="text-align: center; ">居中元素</div>
+				<div class="box-nowidth" style="text-align: center; ">居中元素（宽度未知）</div>
 			</div>
 		</fieldset>
-		
+
 		<fieldset>
 			<legend>块级元素（text-align + inline-block）</legend>
 			<ul>
@@ -45,7 +47,7 @@
 			</ul>
 
 			<div style="text-align: center;">
-				<div class="box-nowidth" style="display: inline-block;">居中元素</div>
+				<div class="box-nowidth" style="display: inline-block;">居中元素（宽度未知）</div>
 			</div>
 		</fieldset>
 
@@ -56,29 +58,40 @@
 			</ul>
 
 			<div>
-				<div class="box" style="margin: 0 auto;">居中元素</div>
+				<div class="box" style="margin: 0 auto;">居中元素(固定宽度)</div>
 			</div>
 		</fieldset>
 
 		<fieldset>
-			<legend>块级元素（position）</legend>
+			<legend>块级元素（position + transform）</legend>
 			<ul>
 				<li>ie8+</li>
 			</ul>
 
 			<div style="position: relative;">
-				<div class="box" style="position:absolute;left:50%;transform:translateX(-50%);">居中元素</div>
+				<div class="box-nowidth" style="position:absolute;left:50%;transform:translateX(-50%);">居中元素（宽度未知）</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>块级元素（position + margin-left）</legend>
+			<ul>
+				<li>ie8+</li>
+			</ul>
+
+			<div style="position: relative; height: 100%;">
+				<div class="box" style="position:absolute;left:50%; width: 200px; margin-left: -100px;">居中元素（宽度固定）</div>
 			</div>
 		</fieldset>
 
 		<fieldset>
 			<legend>块级元素（flex）</legend>
 			<ul>
-				<li>ie9+</li>
+				<li>ie10+</li>
 			</ul>
-			
+
 			<div style="display: flex;justify-content: center;">
-				<div class="box">居中元素</div>
+				<div class="box-nowidth">居中元素（宽度未知）</div>
 			</div>
 		</fieldset>
 
@@ -86,9 +99,43 @@
 
 		<fieldset>
 			<legend>行内元素（text-align）</legend>
-			
+
 			<div style="text-align: center;">
-				<span class="box">居中元素</span>
+				<span class="box-nowidth">居中元素（宽度未知）</span>
+				<!--<div class="box" style="display: inline-block">居中元素</div>-->
+			</div>
+		</fieldset>
+
+		<hr />
+
+		<fieldset>
+			<legend>多元素水平居中(flex)</legend>
+			<ul>
+				<li>ie10+</li>
+			</ul>
+
+			<div style="display: flex; display: -webkit-flex; justify-content: center;">
+				<div class="box-nowidth">元素1</div>
+				<div class="box">元素2</div>
+				<div class="box-nowidth">元素3</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>多元素水平居中(text-align + margin)</legend>
+
+			<style>
+				.center-item-1 {
+					display: inline-block;
+					margin: 0 auto;
+					border: 1px dashed;
+				}
+			</style>
+
+			<div style="text-align: center;">
+				<div class="center-item-1">元素1</div>
+				<div class="center-item-1">元素2</div>
+				<div class="center-item-1">元素3</div>
 			</div>
 		</fieldset>
 

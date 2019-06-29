@@ -11,7 +11,7 @@
 				border: 1px dashed;
 			}
 			
-			.box-nowidth {
+			.box-nowh {
 				border: 1px solid;
 			}
 			
@@ -29,7 +29,7 @@
 		<fieldset>
 			<legend>块级元素（absolute + transform）</legend>
 			<div style=" position:relative; height: 100%;">
-				<div class="box" style="position: absolute; left: 50%;top: 50%; transform: translate(-50%, -50%);">居中元素</div>
+				<div class="box-nowh" style="position: absolute; left: 50%;top: 50%; transform: translate(-50%, -50%);">居中元素（宽度、高度未知）</div>
 			</div>
 		</fieldset>
 
@@ -37,25 +37,43 @@
 			<legend>行级元素（text-align + table-cell + vertical-align）</legend>
 
 			<div style="text-align:center;display:table-cell;vertical-align:middle; height: 200px; width: 500px;">
-				<span class="box">居中元素</span>
+				<span class="box-nowh">居中元素（固定宽度、高度）</span>
 			</div>
 		</fieldset>
-		
-		
+
+		<fieldset>
+			<legend>块级元素（text-align + table + vertical-align）</legend>
+
+			<div style="text-align:center; display: table; vertical-align: middle; height: 100%; width: 100%;">
+				<div class="box-nowh" style="display: table-cell; vertical-align: middle;">居中元素（宽度、高度未知）</div>
+			</div>
+		</fieldset>
+
 		<fieldset>
 			<legend>块级元素（absolute + margin）</legend>
 
 			<div style="position: relative; height: 100%;">
-				<div class="box" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; height: 100px;">居中元素</div>
+				<div class="box-nowh" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; width: 200px; height: 100px;">居中元素（固定宽度、高度）</div>
 			</div>
 		</fieldset>
-		
-		
+
 		<fieldset>
 			<legend>块级元素（flex）</legend>
 
 			<div style="display: flex; display: -webkit-flex; justify-content: center; align-items: center; height: 100%;">
-				<div class="box" >居中元素</div>
+				<div class="box">居中元素(宽度、高度未知)</div>
+			</div>
+		</fieldset>
+
+		<hr />
+
+		<fieldset>
+			<legend>多列元素（text-align + table + vertical-align）</legend>
+
+			<div style="text-align:center; display: table; vertical-align: middle; height: 100%; width: 100%;">
+				<div class="box-nowh" style="display: table-cell; vertical-align: middle;">居中元素（宽度、高度未知）</div>
+				<div class="box-nowh" style="display: table-cell; vertical-align: middle;">居中元素（宽度、高度未知）</div>
+				<div class="box-nowh" style="display: table-cell; vertical-align: middle;">居中元素（宽度、高度未知）</div>
 			</div>
 		</fieldset>
 
