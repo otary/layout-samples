@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>垂直居中</title>
+
+		<style>
+			html,
+			body {
+				height: 100%;
+			}
+			
+			.box {
+				width: 100px;
+				border: 1px dashed;
+			}
+			
+			.box-nowidth {
+				border: 1px solid;
+			}
+			
+			fieldset {
+				margin: 20px;
+				height: 200px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h1>垂直居中</h1>
+		<hr />
+
+		<fieldset>
+			<legend>行级元素（table-cell + vertical-align）</legend>
+
+			<div style="display: table-cell; vertical-align: middle; height:200px">
+				<div class="box">居中元素</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>块级元素（relative + margin-top）</legend>
+
+			<div style="position: relative; height: 100%;">
+				<div class="box" style=" position:relative;top:50%;height: 100px; margin-top: -50px;">居中元素</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>块级元素（absoulte + transform）</legend>
+
+			<div style="position: relative; height: 100%; ">
+				<div class="box" style="position:absolute;top:50%;transform:translateY(-50%);">居中元素</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>块级元素（absoulte + margin）</legend>
+
+			<div style="position: relative; height: 100%; ">
+				<div class="box" style="position: absolute;top: 0;bottom: 0;margin: auto; height: 100px;">居中元素</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>块级元素（flex + align-items）</legend>
+
+			<div style="position:flex;display: -webkit-flex;align-items:center; height: 100%;">
+				<div class="box" >居中元素</div>
+			</div>
+		</fieldset>
+
+	</body>
+
+</html>

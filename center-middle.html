@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>水平-垂直居中</title>
+
+		<style>
+			.box {
+				width: 100px;
+				border: 1px dashed;
+			}
+			
+			.box-nowidth {
+				border: 1px solid;
+			}
+			
+			fieldset {
+				margin: 20px;
+				height: 250px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>水平-垂直居中</h1>
+		<hr />
+
+		<fieldset>
+			<legend>块级元素（absolute + transform）</legend>
+			<div style=" position:relative; height: 100%;">
+				<div class="box" style="position: absolute; left: 50%;top: 50%; transform: translate(-50%, -50%);">居中元素</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>行级元素（text-align + table-cell + vertical-align）</legend>
+
+			<div style="text-align:center;display:table-cell;vertical-align:middle; height: 200px; width: 500px;">
+				<span class="box">居中元素</span>
+			</div>
+		</fieldset>
+		
+		
+		<fieldset>
+			<legend>块级元素（absolute + margin）</legend>
+
+			<div style="position: relative; height: 100%;">
+				<div class="box" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; height: 100px;">居中元素</div>
+			</div>
+		</fieldset>
+		
+		
+		<fieldset>
+			<legend>块级元素（flex）</legend>
+
+			<div style="display: flex; display: -webkit-flex; justify-content: center; align-items: center; height: 100%;">
+				<div class="box" >居中元素</div>
+			</div>
+		</fieldset>
+
+	</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>水平居中</title>
+
+		<style>
+			.box {
+				width: 100px;
+				border: 1px dashed;
+			}
+			
+			.box-nowidth {
+				border: 1px solid;
+			}
+			
+			fieldset {
+				margin: 20px;
+				height: 120px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h1>水平居中</h1>
+		<hr />
+
+		<fieldset>
+			<legend>块级元素（text-align）</legend>
+			<ul>
+				<li>ie6</li>
+			</ul>
+
+			<div>
+				<div class="box-nowidth" style="text-align: center; ">居中元素</div>
+			</div>
+		</fieldset>
+		
+		<fieldset>
+			<legend>块级元素（text-align + inline-block）</legend>
+			<ul>
+				<li>ie6</li>
+			</ul>
+
+			<div style="text-align: center;">
+				<div class="box-nowidth" style="display: inline-block;">居中元素</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>块级元素（margin）</legend>
+			<ul>
+				<li>ie8</li>
+			</ul>
+
+			<div>
+				<div class="box" style="margin: 0 auto;">居中元素</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>块级元素（position）</legend>
+			<ul>
+				<li>ie8+</li>
+			</ul>
+
+			<div style="position: relative;">
+				<div class="box" style="position:absolute;left:50%;transform:translateX(-50%);">居中元素</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>块级元素（flex）</legend>
+			<ul>
+				<li>ie9+</li>
+			</ul>
+			
+			<div style="display: flex;justify-content: center;">
+				<div class="box">居中元素</div>
+			</div>
+		</fieldset>
+
+		<hr />
+
+		<fieldset>
+			<legend>行内元素（text-align）</legend>
+			
+			<div style="text-align: center;">
+				<span class="box">居中元素</span>
+			</div>
+		</fieldset>
+
+	</body>
+
+</html>
