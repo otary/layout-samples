@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>flex布局</title>
+    </head>
+    <body>
+
+        <h1>弹性布局</h1>
+
+        <fieldset>
+            <legend>
+                默认
+            </legend>
+            <div style="display:flex;">
+                <div class="border-box">
+                    1111111111111111111111111111111
+                </div>
+                <div class="border-box">
+                    2222222222222222222222222222222
+                </div>
+                <div class="border-box">
+                    3333333333333333333333333333333
+                </div>
+                <div class="border-box">
+                    4444444444444444444444444444444
+                </div>
+                <div class="border-box">
+                    5555555555555555555555555555555
+                </div>
+                <div class="border-box">
+                    6666666666666666666666666666666
+                </div>
+                <div class="border-box">
+                    7777777777777777777777777777777
+                </div>
+                <div class="border-box">
+                    8888888888888888888888888888888
+                </div>
+            </div>
+        </fieldset>
+
+        <br>
+
+        <div>
+            <h2>水平排列（flex-direction）</h2>
+
+            <fieldset>
+                <legend>
+                    水平反向排列（flex-direction: column）
+                </legend>
+                <div style="display:flex; flex-direction: row-reverse;">
+                    <div class="border-box">
+                        1111111111111111111111111111111
+                    </div>
+                    <div class="border-box">
+                        2222222222222222222222222222222
+                    </div>
+                    <div class="border-box">
+                        3333333333333333333333333333333
+                    </div>
+                    <div class="border-box">
+                        4444444444444444444444444444444
+                    </div>
+                    <div class="border-box">
+                        5555555555555555555555555555555
+                    </div>
+                    <div class="border-box">
+                        6666666666666666666666666666666
+                    </div>
+                    <div class="border-box">
+                        7777777777777777777777777777777
+                    </div>
+                    <div class="border-box">
+                        8888888888888888888888888888888
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+            <fieldset>
+                <legend>
+                    垂直排列（flex-direction: column）
+                </legend>
+                <div style="display:flex; flex-direction: column;">
+                    <div class="border-box">
+                        1111111111111111111111111111111
+                    </div>
+                    <div class="border-box">
+                        2222222222222222222222222222222
+                    </div>
+                    <div class="border-box">
+                        3333333333333333333333333333333
+                    </div>
+                    <div class="border-box">
+                        4444444444444444444444444444444
+                    </div>
+                    <div class="border-box">
+                        5555555555555555555555555555555
+                    </div>
+                    <div class="border-box">
+                        6666666666666666666666666666666
+                    </div>
+                    <div class="border-box">
+                        7777777777777777777777777777777
+                    </div>
+                    <div class="border-box">
+                        8888888888888888888888888888888
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+            <fieldset>
+                <legend>
+                    垂直反向排列（flex-direction: column-reverse）
+                </legend>
+                <div style="display:flex; flex-direction: column-reverse;">
+                    <div class="border-box">
+                        1111111111111111111111111111111
+                    </div>
+                    <div class="border-box">
+                        2222222222222222222222222222222
+                    </div>
+                    <div class="border-box">
+                        3333333333333333333333333333333
+                    </div>
+                    <div class="border-box">
+                        4444444444444444444444444444444
+                    </div>
+                    <div class="border-box">
+                        5555555555555555555555555555555
+                    </div>
+                    <div class="border-box">
+                        6666666666666666666666666666666
+                    </div>
+                    <div class="border-box">
+                        7777777777777777777777777777777
+                    </div>
+                    <div class="border-box">
+                        8888888888888888888888888888888
+                    </div>
+                </div>
+            </fieldset>
+
+        </div>
+        <br>
+
+        <div>
+            <h2>水平轴对齐方式（justify-content）</h2>
+            <fieldset>
+                <legend>左对齐（justify-content: flex-start）</legend>
+
+                <div style="display:flex; justify-content: flex-start;">
+                    <div class="border-box">
+                        11111111
+                    </div>
+                    <div class="border-box">
+                        22222222
+                    </div>
+                    <div class="border-box">
+                        33333333
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>右对齐（justify-content: flex-end）</legend>
+
+                <div style="display:flex; justify-content: flex-end;">
+                    <div class="border-box">
+                        11111111
+                    </div>
+                    <div class="border-box">
+                        22222222
+                    </div>
+                    <div class="border-box">
+                        33333333
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>居中（justify-content: center）</legend>
+
+                <div style="display:flex; justify-content: center;">
+                    <div class="border-box">
+                        11111111
+                    </div>
+                    <div class="border-box">
+                        22222222
+                    </div>
+                    <div class="border-box">
+                        33333333
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>两端对齐（justify-content: space-between）</legend>
+
+                <div style="display:flex; justify-content: space-between;">
+                    <div class="border-box">
+                        11111111
+                    </div>
+                    <div class="border-box">
+                        22222222
+                    </div>
+                    <div class="border-box">
+                        33333333
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>两侧间隔相等（justify-content: space-around）</legend>
+
+                <div style="display:flex; justify-content: space-around;">
+                    <div class="border-box">
+                        11111111
+                    </div>
+                    <div class="border-box">
+                        22222222
+                    </div>
+                    <div class="border-box">
+                        33333333
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <br>
+
+        <div>
+            <h2>垂直轴对齐方式（align-items）</h2>
+
+            <fieldset>
+                <legend>垂直轴顶部对齐（align-items: flex-start）</legend>
+
+                <div style="display:flex; align-items: flex-start;">
+                    <div class="border-box" style="height: 50px;">
+                        11111111
+                    </div>
+                    <div class="border-box" style="height: 150px;">
+                        22222222
+                    </div>
+                    <div class="border-box" style="height: 90px;">
+                        33333333
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>垂直轴顶部对齐（align-items: flex-start）</legend>
+
+                <div style="display:flex; align-items: flex-start;">
+                    <div class="border-box" style="height: 50px;">
+                        11111111
+                    </div>
+                    <div class="border-box" style="height: 150px;">
+                        22222222
+                    </div>
+                    <div class="border-box" style="height: 90px;">
+                        33333333
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>垂直轴底部对齐（align-items: flex-end）</legend>
+
+                <div style="display:flex; align-items: flex-end;">
+                    <div class="border-box" style="height: 50px;">
+                        11111111
+                    </div>
+                    <div class="border-box" style="height: 150px;">
+                        22222222
+                    </div>
+                    <div class="border-box" style="height: 90px;">
+                        33333333
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>垂直轴居中对齐（align-items: center）</legend>
+
+                <div style="display:flex; align-items: center;">
+                    <div class="border-box" style="height: 50px;">
+                        11111111
+                    </div>
+                    <div class="border-box" style="height: 150px;">
+                        22222222
+                    </div>
+                    <div class="border-box" style="height: 90px;">
+                        33333333
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>垂直轴基线对齐（align-items: baseline）</legend>
+
+                <div style="display:flex; align-items: baseline;">
+                    <div class="border-box" style="height: 50px;">
+                        11111111
+                    </div>
+                    <div class="border-box" style="height: 150px;">
+                        22222222
+                    </div>
+                    <div class="border-box" style="height: 90px;">
+                        33333333
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>垂直轴占满（align-items: stretch，默认）</legend>
+
+                <div style="display:flex; align-items: stretch; height: 100px;">
+                    <div class="border-box">
+                        11111111
+                    </div>
+                    <div class="border-box">
+                        22222222
+                    </div>
+                    <div class="border-box">
+                        33333333
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+
+        <div>
+
+            <h3>横轴+垂直轴（align-content）</h3>
+            <fieldset>
+                <legend>起点对齐（align-content: flex-start）</legend>
+
+                <div style="display:flex; align-content: flex-start; height: 100px;">
+                    <div class="border-box">
+                        11111111
+                    </div>
+                    <div class="border-box">
+                        22222222
+                    </div>
+                    <div class="border-box">
+                        33333333
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <br>
+
+        <div>
+            <h2>item属性</h2>
+
+            <fieldset>
+                <legend>放大比例（flex-grow, 默认: 0）</legend>
+                <div style="display:flex;">
+                    <div class="border-box" style="flex-grow: 1;">
+                        11111111
+                    </div>
+                    <div class="border-box">
+                        22222222
+                    </div>
+                    <div class="border-box" style="flex-grow: 1;">
+                        33333333
+                    </div>
+                    <div class="border-box">
+                        44444444
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>缩小比例（flex-shrink, 默认: 1）</legend>
+                <div style="display:flex;">
+                    <div class="border-box" style="flex-shrink: 1;">
+                        11111111
+                    </div>
+                    <div class="border-box">
+                        22222222
+                    </div>
+                    <div class="border-box" style="flex-shrink: 1;">
+                        33333333
+                    </div>
+                    <div class="border-box">
+                        44444444
+                    </div>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>横轴占据的空间大小（flex-basis, 默认: auto）</legend>
+                <div style="display:flex;">
+                    <div class="border-box" style="flex-basis: 200px;">
+                        11111111
+                    </div>
+                    <div class="border-box">
+                        22222222
+                    </div>
+                    <div class="border-box" style="flex-basis: 200px;">
+                        33333333
+                    </div>
+                    <div class="border-box">
+                        44444444
+                    </div>
+                </div>
+            </fieldset>
+
+
+            <br>
+
+            <fieldset>
+                <legend>单个项目对齐（align-self, 默认: auto）</legend>
+                <div style="display:flex; height: 200px;">
+                    <div class="border-box" style="align-self: flex-end;">
+                        align-self: flex-end;
+                    </div>
+                    <div class="border-box">
+                        align-self: stretch;
+                    </div>
+                    <div class="border-box" style="align-self: center;">
+                        align-self: center;
+                    </div>
+                    <div class="border-box" style="align-self: baseline;">
+                        align-self: baseline;
+                    </div>
+                    <div class="border-box" style="align-self: flex-start;">
+                        align-self: flex-start;
+                    </div>
+                </div>
+
+            </fieldset>
+
+        </div>
+
+
+        <style>
+            .border-box {
+                padding: 10px;
+                border: 1px solid #ccc;
+            }
+
+            legend {
+                color: red;
+            }
+        </style>
+
+    </body>
+</html>

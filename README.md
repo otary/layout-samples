@@ -12,3 +12,5 @@
 - [双飞翼布局](https://otary.github.io/layout-samples/double-wing.html)
 
 - [栅格布局](https://otary.github.io/layout-samples/grid.html)
+
+- [flex布局](https://otary.github.io/layout-samples/flex.html)
