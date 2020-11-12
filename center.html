@@ -1,144 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<title>水平居中</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>水平居中</title>
 
-		<style>
-			.box {
-				width: 200px;
-				border: 1px dashed;
-			}
-			
-			.box-nowidth {
-				border: 1px solid;
-			}
-			
-			fieldset {
-				margin: 20px;
-				height: 120px;
-			}
-			
-		
-		</style>
-	</head>
+        <style>
+            .box {
+                width: 200px;
+                border: 1px dashed;
+            }
 
-	<body>
+            .box-nowidth {
+                border: 1px solid;
+            }
 
-		<h1>水平居中</h1>
-		<hr />
+            fieldset {
+                margin: 20px;
+                height: 120px;
+            }
 
-		<fieldset>
-			<legend>块级元素（text-align）</legend>
-			<ul>
-				<li>ie6</li>
-			</ul>
+            fieldset.code {
+                border-radius: 10px;
+            }
 
-			<div>
-				<div class="box-nowidth" style="text-align: center; ">居中元素（宽度未知）</div>
-			</div>
-		</fieldset>
+            textarea {
+                width: 100%;
+                height: 100%;
+                border: 0;
+                outline: 0;
+            }
+        </style>
+    </head>
 
-		<fieldset>
-			<legend>块级元素（text-align + inline-block）</legend>
-			<ul>
-				<li>ie6</li>
-			</ul>
+    <body>
 
-			<div style="text-align: center;">
-				<div class="box-nowidth" style="display: inline-block;">居中元素（宽度未知）</div>
-			</div>
-		</fieldset>
+        <h1>水平居中</h1>
+        <hr/>
 
-		<fieldset>
-			<legend>块级元素（margin）</legend>
-			<ul>
-				<li>ie8</li>
-			</ul>
+        <fieldset>
+            <legend>块级元素（text-align）</legend>
+            <ul>
+                <li>ie6</li>
+            </ul>
 
-			<div>
-				<div class="box" style="margin: 0 auto;">居中元素(固定宽度)</div>
-			</div>
-		</fieldset>
+            <div>
+                <div class="box-nowidth" style="text-align: center; ">居中元素（宽度未知）</div>
+            </div>
+        </fieldset>
+        <fieldset class="code">
+            <legend>代码示例</legend>
 
-		<fieldset>
-			<legend>块级元素（position + transform）</legend>
-			<ul>
-				<li>ie8+</li>
-			</ul>
+            <textarea>
+                <div>
+                    <div class="box-nowidth" style="text-align: center; ">居中元素（宽度未知）</div>
+                </div>
+            </textarea>
+        </fieldset>
 
-			<div style="position: relative;">
-				<div class="box-nowidth" style="position:absolute;left:50%;transform:translateX(-50%);">居中元素（宽度未知）</div>
-			</div>
-		</fieldset>
+        <hr>
 
-		<fieldset>
-			<legend>块级元素（position + margin-left）</legend>
-			<ul>
-				<li>ie8+</li>
-			</ul>
+        <fieldset>
+            <legend>块级元素（text-align + inline-block）</legend>
+            <ul>
+                <li>ie6</li>
+            </ul>
 
-			<div style="position: relative; height: 100%;">
-				<div class="box" style="position:absolute;left:50%; width: 200px; margin-left: -100px;">居中元素（宽度固定）</div>
-			</div>
-		</fieldset>
+            <div style="text-align: center;">
+                <div class="box-nowidth" style="display: inline-block;">居中元素（宽度未知）</div>
+            </div>
 
-		<fieldset>
-			<legend>块级元素（flex）</legend>
-			<ul>
-				<li>ie10+</li>
-			</ul>
 
-			<div style="display: flex;justify-content: center;">
-				<div class="box-nowidth">居中元素（宽度未知）</div>
-			</div>
-		</fieldset>
+        </fieldset>
 
-		<hr />
+        <fieldset class="code">
+            <legend>代码示例</legend>
 
-		<fieldset>
-			<legend>行内元素（text-align）</legend>
+            <textarea>
+                <div style="text-align: center;">
+                    <div class="box-nowidth" style="display: inline-block;">居中元素（宽度未知）</div>
+                </div>
+            </textarea>
+        </fieldset>
+        <hr>
 
-			<div style="text-align: center;">
-				<span class="box-nowidth">居中元素（宽度未知）</span>
-				<!--<div class="box" style="display: inline-block">居中元素</div>-->
-			</div>
-		</fieldset>
+        <fieldset>
+            <legend>块级元素（margin）</legend>
+            <ul>
+                <li>ie8</li>
+            </ul>
 
-		<hr />
+            <div>
+                <div class="box" style="margin: 0 auto;">居中元素(固定宽度)</div>
+            </div>
+        </fieldset>
 
-		<fieldset>
-			<legend>多元素水平居中(flex)</legend>
-			<ul>
-				<li>ie10+</li>
-			</ul>
+        <fieldset class="code">
+            <legend>代码示例</legend>
 
-			<div style="display: flex; display: -webkit-flex; justify-content: center;">
-				<div class="box-nowidth">元素1</div>
-				<div class="box">元素2</div>
-				<div class="box-nowidth">元素3</div>
-			</div>
-		</fieldset>
+            <textarea>
+                <div>
+                    <div class="box" style="margin: 0 auto;">居中元素(固定宽度)</div>
+                </div>
+            </textarea>
+        </fieldset>
 
-		<fieldset>
-			<legend>多元素水平居中(text-align + margin)</legend>
+        <fieldset>
+            <legend>块级元素（position + transform）</legend>
+            <ul>
+                <li>ie8+</li>
+            </ul>
 
-			<style>
-				.center-item-1 {
-					display: inline-block;
-					margin: 0 auto;
-					border: 1px dashed;
-				}
-			</style>
+            <div style="position: relative;">
+                <div class="box-nowidth" style="position:absolute;left:50%;transform:translateX(-50%);">居中元素（宽度未知）</div>
+            </div>
+        </fieldset>
+        <fieldset class="code">
+            <legend>代码示例</legend>
 
-			<div style="text-align: center;">
-				<div class="center-item-1">元素1</div>
-				<div class="center-item-1">元素2</div>
-				<div class="center-item-1">元素3</div>
-			</div>
-		</fieldset>
+            <textarea>
+                <div style="position: relative;">
+                    <div class="box-nowidth" style="position:absolute;left:50%;transform:translateX(-50%);">居中元素（宽度未知）</div>
+                </div>
+            </textarea>
+        </fieldset>
+        <hr>
 
-	</body>
+        <fieldset>
+            <legend>块级元素（position + margin-left）</legend>
+            <ul>
+                <li>ie8+</li>
+            </ul>
+
+            <div style="position: relative; height: 100%;">
+                <div class="box" style="position:absolute;left:50%; width: 200px; margin-left: -100px;">居中元素（宽度固定）</div>
+            </div>
+        </fieldset>
+
+        <fieldset class="code">
+            <legend>代码示例</legend>
+
+            <textarea>
+                <div style="position: relative; height: 100%;">
+                    <div class="box" style="position:absolute;left:50%; width: 200px; margin-left: -100px;">居中元素（宽度固定）</div>
+                </div>
+            </textarea>
+        </fieldset>
+        <hr>
+
+
+        <fieldset>
+            <legend>块级元素（flex）</legend>
+            <ul>
+                <li>ie10+</li>
+            </ul>
+
+            <div style="display: flex;justify-content: center;">
+                <div class="box-nowidth">居中元素（宽度未知）</div>
+            </div>
+        </fieldset>
+
+        <fieldset class="code">
+            <legend>代码示例</legend>
+
+            <textarea>
+                <div style="display: flex;justify-content: center;">
+                    <div class="box-nowidth">居中元素（宽度未知）</div>
+                </div>
+            </textarea>
+        </fieldset>
+        <hr>
+
+        <fieldset class="code">
+            <legend>代码示例</legend>
+
+            <textarea>
+                <div style="display: flex;justify-content: center;">
+                    <div class="box-nowidth">居中元素（宽度未知）</div>
+                </div>
+            </textarea>
+        </fieldset>
+        <hr>
+
+        <fieldset>
+            <legend>行内元素（text-align）</legend>
+
+            <div style="text-align: center;">
+                <span class="box-nowidth">居中元素（宽度未知）</span>
+                <!--<div class="box" style="display: inline-block">居中元素</div>-->
+            </div>
+        </fieldset>
+
+        <fieldset class="code">
+            <legend>代码示例</legend>
+
+            <textarea>
+                <div style="text-align: center;">
+                    <span class="box-nowidth">居中元素（宽度未知）</span>
+                    <!--<div class="box" style="display: inline-block">居中元素</div>-->
+                </div>
+            </textarea>
+        </fieldset>
+        <hr>
+
+        <fieldset>
+            <legend>多元素水平居中(flex)</legend>
+            <ul>
+                <li>ie10+</li>
+            </ul>
+
+            <div style="display: flex; display: -webkit-flex; justify-content: center;">
+                <div class="box-nowidth">元素1</div>
+                <div class="box">元素2</div>
+                <div class="box-nowidth">元素3</div>
+            </div>
+        </fieldset>
+
+        <fieldset class="code">
+            <legend>代码示例</legend>
+
+            <textarea>
+                <div style="display: flex; display: -webkit-flex; justify-content: center;">
+                    <div class="box-nowidth">元素1</div>
+                    <div class="box">元素2</div>
+                    <div class="box-nowidth">元素3</div>
+                </div>
+            </textarea>
+        </fieldset>
+        <hr>
+
+        <fieldset>
+            <legend>多元素水平居中(text-align + margin)</legend>
+
+            <style>
+                .center-item-1 {
+                    display: inline-block;
+                    margin: 0 auto;
+                    border: 1px dashed;
+                }
+            </style>
+
+            <div style="text-align: center;">
+                <div class="center-item-1">元素1</div>
+                <div class="center-item-1">元素2</div>
+                <div class="center-item-1">元素3</div>
+            </div>
+        </fieldset>
+        <fieldset class="code">
+            <legend>代码示例</legend>
+
+            <textarea>
+                <style>
+                    .center-item-1 {
+                        display: inline-block;
+                        margin: 0 auto;
+                        border: 1px dashed;
+                    }
+                </style>
+
+                <div style="text-align: center;">
+                    <div class="center-item-1">元素1</div>
+                    <div class="center-item-1">元素2</div>
+                    <div class="center-item-1">元素3</div>
+                </div>
+            </textarea>
+        </fieldset>
+        <hr>
+
+
+
+    </body>
 
 </html>
